@@ -1,0 +1,57 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 250px; /* Ancho fijo del sidebar */
+  background-color: #222; /* Negro oscuro */
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  color: #61dafb; /* Un color de acento */
+  font-size: 1.5rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background-color: #333;
+}
+
+.sidebar-menu span {
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+/* Puedes añadir estilos para iconos si usas una librería como FontAwesome */
+.sidebar-menu .icon {
+  margin-right: 10px;
+}
