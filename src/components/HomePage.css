@@ -1,0 +1,69 @@
+/* src/components/HomePage.css */
+.home-page-section {
+  text-align: center;
+  padding: 40px;
+  max-width: 700px; /* Ajusta el ancho según lo que necesites */
+}
+
+.home-page-section h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.home-page-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.home-actions {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Espacio entre los botones */
+}
+
+.home-actions p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  width: 80%; /* Hacer los botones más anchos */
+  max-width: 300px; /* Limitar el ancho máximo */
+}
+
+.action-button.primary {
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: 2px solid #28a745;
+}
+
+.action-button.primary:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.action-button.secondary {
+  background-color: #007bff; /* Azul */
+  color: white;
+  border: 2px solid #007bff;
+}
+
+.action-button.secondary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}

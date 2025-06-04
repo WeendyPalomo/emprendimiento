@@ -1,0 +1,99 @@
+/* src/components/Explore.css */
+.explore-section {
+  text-align: center;
+}
+
+.category-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.category-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  width: 280px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-align: left;
+  /* Animación para expandir/colapsar */
+  max-height: 80px; /* Altura inicial colapsada (ajusta si es necesario) */
+  transition: max-height 0.3s ease-out; /* Transición suave */
+}
+
+.category-card.expanded {
+  max-height: 500px; /* Altura máxima para cuando está expandida (ajusta si el contenido es más largo) */
+  transition: max-height 0.5s ease-in; /* Transición más larga para expandir */
+}
+
+
+.category-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-right: 15px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  flex-grow: 1;
+  color: #333;
+}
+
+.expand-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.category-card.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+.card-content {
+  padding: 15px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Nuevos estilos para el botón 'Ir al Chat' --- */
+.chat-button-container {
+  text-align: center; /* Centra el botón dentro de su contenedor */
+  margin-top: 20px; /* Espacio superior para separar del texto */
+}
+
+.go-to-chat-button {
+  display: inline-block; /* Para que el padding y margen funcionen */
+  background-color: #222; /* Negro */
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none; /* Quita el subrayado del enlace */
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 1px solid #222; /* Borde para el efecto hover */
+}
+
+.go-to-chat-button:hover {
+  background-color: #000; /* Negro más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Pequeño efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
