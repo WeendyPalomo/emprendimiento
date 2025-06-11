@@ -1,18 +1,16 @@
 /* src/components/ContentArea.css */
 .content-section {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin: 0 20px; /* Elimina el margen superior/inferior para que ocupe más */
-  width: 100%; /* Ocupa el 100% del espacio disponible */
-  max-width: 900px; /* Un poco más ancho para el contenido principal */
-  height: fit-content; /* Se ajusta a su contenido */
-  box-sizing: border-box;
-  text-align: left;
-  flex-grow: 1; /* Permite que el componente crezca y ocupe espacio */
-  display: flex; /* Para controlar el layout interno si es necesario */
-  flex-direction: column; /* Organiza los elementos internos verticalmente */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows the section to fill vertical space */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure it takes 100% of its parent's width */
+    max-width: 100%; /* Ensure no max-width is restricting it */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .content-section h2 {
@@ -26,6 +24,20 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1; /* Permite que la sección del chat crezca */
+}
+
+.chat-window {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  width: 100%; /* Ensure the chat window itself takes full width of its parent */
+  max-width: 100%; /* No max-width */
+  box-sizing: border-box;
 }
 
 .chat-section .chat-window {
@@ -99,4 +111,28 @@
 
 .chat-section .message-input-form button:hover {
     background-color: #218838;
+}
+
+/* src/components/ContentArea.css (example adjustments) */
+
+/* Existing styles for content-area */
+.content-area {
+    flex-grow: 1; /* This is crucial for the content to take available space */
+    padding: 20px;
+    background-color: #f5f7fa;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Existing styles for content-section */
+.content-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex-grow: 1; /* This makes the chat section expand within content-area */
+    display: flex;
+    flex-direction: column;
 }

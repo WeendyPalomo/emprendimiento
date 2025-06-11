@@ -21,11 +21,6 @@ function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link to="/search-chats">
-            <span>🔍 Buscar Chats</span>
-          </Link>
-        </li>
-        <li>
           <Link to="/explore">
             <span>✨ Explorar</span>
           </Link>

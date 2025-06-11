@@ -7,16 +7,23 @@ body {
 
 .app-container {
   display: flex;
-  min-height: 100vh; /* Asegura que ocupe al menos toda la altura de la vista */
+  height: 100vh; /* Ensure full viewport height */
+  overflow: hidden; /* Prevent overall scrolling */
+}
+
+
+.sidebar {
+  /* Your existing sidebar styles */
+  width: 250px; /* Example fixed width for sidebar */
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
 }
 
 .content-area {
-  flex-grow: 1; /* Ocupa todo el espacio restante */
-  padding: 20px;
-  background-color: #f4f7f6;
+  flex-grow: 1; /* This is crucial: allows content-area to take all available space */
+  padding: 20px; /* Maintain your padding */
+  background-color: #f5f7fa; /* Your background color */
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: flex-start; /* Alinea el contenido arriba */
-  overflow-y: auto; /* Permite scroll si el contenido es largo */
-  box-sizing: border-box; /* Para que el padding no añada al ancho/alto */
+  flex-direction: column;
+  /* Remove any fixed width or max-width here if present */
+  /* max-width: none; */ /* Ensure no max-width is set */
 }
