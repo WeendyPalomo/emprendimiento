@@ -1,8 +1,16 @@
 /* src/components/HomePage.css */
 .home-page-section {
-  text-align: center;
-  padding: 40px;
-  max-width: 700px; /* Ajusta el ancho según lo que necesites */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically if there's extra space */
+  text-align: center; /* Ensures text inside paragraphs is also centered */
+  height: 100%; /* Make it take full height of its parent */
+  /* Remove any fixed width or max-width that might be restricting it */
+  max-width: 800px; /* Adjust as needed to control overall width of centered content */
+  margin: 0 auto; /* This will center the block itself within its parent if max-width is set */
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .home-page-section h2 {
@@ -19,12 +27,12 @@
 }
 
 .home-actions {
-  margin-top: 30px;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px; /* Espacio entre los botones */
+  gap: 15px; /* Space between buttons */
+  margin-top: 25px;
+  width: 100%; /* Ensure buttons take full width of their container */
+  max-width: 300px; /* Limit button group width for better appearance */
 }
 
 .home-actions p {
@@ -33,37 +41,29 @@
 }
 
 .action-button {
-  display: inline-block;
   padding: 12px 25px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
-  width: 80%; /* Hacer los botones más anchos */
-  max-width: 300px; /* Limitar el ancho máximo */
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make buttons fill the max-width of home-actions */
+  box-sizing: border-box;
 }
 
 .action-button.primary {
-  background-color: #28a745; /* Verde */
+  background-color: #28a745; /* Green for new chat */
   color: white;
-  border: 2px solid #28a745;
 }
 
 .action-button.primary:hover {
   background-color: #218838;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
 
 .action-button.secondary {
-  background-color: #007bff; /* Azul */
+  background-color: #007bff; /* Blue for explore */
   color: white;
-  border: 2px solid #007bff;
 }
 
 .action-button.secondary:hover {
   background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
