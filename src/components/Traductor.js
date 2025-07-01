@@ -1,6 +1,7 @@
 // src/components/Traductor.js
 import React, { useState, createContext, useContext } from 'react';
 import './Traductor.css'; // Importa los estilos para el botón de traducción
+import ToggleSwitch from './ToggleSwitch';
 
 // 1. Crea el Contexto de Idioma
 export const LanguageContext = createContext();
@@ -94,13 +95,14 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
+
     <LanguageContext.Provider value={{ language, translations: translations[language], toggleLanguage }}>
-      {/* Botón de traducción */}
-      <button className="translate-button" onClick={toggleLanguage}>
-        {translations[language].translateButton}
-      </button>
-      {children} {/* Renderiza los componentes hijos (App.js) */}
+      <div className="language-toggle-container">
+        <ToggleSwitch isOn={language === 'qu'} handleToggle={toggleLanguage} />
+      </div>
+      {children}
     </LanguageContext.Provider>
+
   );
 };
 

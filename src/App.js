@@ -15,10 +15,6 @@ const AppContent = () => {
   return (
     <div className="app-container">
       <Sidebar />
-      {/* Aquí está el botón que cambia el idioma */}
-      <button className="translate-button" onClick={toggleLanguage}>
-        {translations.translateButton}
-      </button>
 
       <div className="content-area">
         <Routes>
