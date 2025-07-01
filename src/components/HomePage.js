@@ -1,30 +1,30 @@
 // src/components/HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ContentArea.css'; // Usará estilos generales de contenido
-import './HomePage.css'; // Nuevos estilos específicos para la Home
+import { useLanguage } from './Traductor'; // ✅ Importar el contexto de idioma
+import './ContentArea.css';
+import './HomePage.css';
 
 function HomePage() {
+  const { translations } = useLanguage(); // ✅ Obtener traducciones del contexto
+
   return (
     <div className="content-section home-page-section">
-      <h2>¡Bienvenido a tu Asistente Legal Rural!</h2>
-      <p>
-        Aquí encontrarás apoyo y orientación sobre temas legales relevantes para la comunidad rural de Chugchilán, Cantón Sigchos, Provincia de Cotopaxi, Ecuador.
+      <h2>{translations.homeTitle}</h2>
+      <p>{translations.homeParagraph1}</p>
+      <p>{translations.homeParagraph2}</p>
 
-        Nuestro objetivo es brindarte información accesible sobre derechos territoriales, uso del agua, conflictos vecinales, temas de familia, trabajo y más.
-      </p>
       <div className="home-actions">
-        <p>Puedes empezar:</p>
+        <p>{translations.homeStart}</p>
         <Link to="/new-chat" className="action-button primary">
-          💬 Iniciar un Nuevo Chat
+          {translations.newChatButton}
         </Link>
         <Link to="/explore" className="action-button secondary">
-          ✨ Explorar Temas Legales
+          {translations.exploreButton}
         </Link>
       </div>
-      <p>
-        Utiliza el menú lateral para navegar entre las diferentes secciones. ¡Estamos aquí para ayudarte!
-      </p>
+
+      <p>{translations.homeFooter}</p>
     </div>
   );
 }
