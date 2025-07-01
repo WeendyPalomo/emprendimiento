@@ -24,12 +24,13 @@
 }
 
 .home-page-section p {
-  font-size: 1.2rem; /* Tamaño de fuente ligeramente más grande */
-  line-height: 1.8; /* Mayor altura de línea para legibilidad */
-  color: var(--color-gray-text); /* Usa la variable */
-  margin-bottom: 25px;
-  max-width: 700px; /* Limita el ancho del párrafo para legibilidad */
+  font-size: 1rem;      /* Más pequeño que 1.2rem */
+  line-height: 1.5;     /* Un poco más compacto */
+  color: var(--color-gray-text);
+  margin-bottom: 20px;  /* Un poco menos espacio */
+  max-width: 700px;
 }
+
 
 .home-actions {
   display: flex;
@@ -107,6 +108,12 @@
     gap: 15px;
     max-width: 280px;
   }
+  .home-text-smaller p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
   .action-button {
     padding: 12px 20px;
     font-size: 1rem;
