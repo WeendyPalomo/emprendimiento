@@ -10,22 +10,25 @@ function HomePage() {
 
   return (
     <div className="content-section home-page-section">
-      <h2>{translations.homeTitle}</h2>
-      <p>{translations.homeParagraph1}</p>
-      <p>{translations.homeParagraph2}</p>
+  <h2>{translations.homeTitle}</h2>
+  <div className="home-text-smaller">
+    <p>{translations.homeParagraph1}</p>
+    <p>{translations.homeParagraph2}</p>
+  </div>
 
-      <div className="home-actions">
-        <p>{translations.homeStart}</p>
-        <Link to="/new-chat" className="action-button primary">
-          {translations.newChatButton}
-        </Link>
-        <Link to="/explore" className="action-button secondary">
-          {translations.exploreButton}
-        </Link>
-      </div>
+  <div className="home-actions">
+    <p>{translations.homeStart}</p>
+    <Link to="/new-chat" className="action-button primary">
+      {translations.newChatButton}
+    </Link>
+    <Link to="/explore" className="action-button secondary">
+      {translations.exploreButton}
+    </Link>
+  </div>
 
-      <p>{translations.homeFooter}</p>
-    </div>
+  <p>{translations.homeFooter}</p>
+</div>
+
   );
 }
 
