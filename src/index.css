@@ -1,13 +1,48 @@
+/* src/index.css */
+
+:root {
+  /* Nueva paleta de colores basada en image_92e3ba.png: verdes y azules */
+  --color-green-light: #C8E6C9; /* Verde claro (similar al de la imagen) */
+  --color-green-medium: #81C784; /* Verde medio (similar al de la imagen, para sidebar y primary) */
+  --color-blue-light: #BBDEFB; /* Azul claro (similar al de la imagen) */
+  --color-blue-medium: #64B5F6; /* Azul medio (similar al de la imagen, para secondary) */
+
+  /* Colores generales */
+  --color-dark: #333333; /* Gris oscuro para texto principal */
+  --color-light: #f8f8f8; /* Gris muy claro para fondos sutiles */
+  --color-white: #ffffff; /* Blanco puro */
+  --color-gray-text: #666666; /* Gris para texto secundario */
+  --color-border: #e0e0e0; /* Borde gris muy claro */
+  --color-background-light: #E8F5E9; /* Fondo general muy claro, tirando a verde */
+  --color-background-dark: #CFD8DC; /* Un gris azulado para contraste */
+
+  /* Sombras (más suaves) */
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  /* Transiciones */
+  --transition-ease: all 0.2s ease-in-out;
+
+  /* Fuentes (asegúrate de importarlas en public/index.html) */
+  --font-primary: 'Poppins', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background-light); /* Fondo general con el nuevo verde claro */
+  color: var(--color-gray-text);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
 }
