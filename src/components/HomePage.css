@@ -2,68 +2,113 @@
 .home-page-section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content horizontally */
-  justify-content: center; /* Centers content vertically if there's extra space */
-  text-align: center; /* Ensures text inside paragraphs is also centered */
-  height: 100%; /* Make it take full height of its parent */
-  /* Remove any fixed width or max-width that might be restricting it */
-  max-width: 800px; /* Adjust as needed to control overall width of centered content */
-  margin: 0 auto; /* This will center the block itself within its parent if max-width is set */
-  padding: 20px; /* Add some padding */
-  box-sizing: border-box; /* Include padding in width calculation */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  max-width: 900px; /* Aumenta el ancho máximo para más espacio */
+  margin: 0 auto;
+  padding: 40px; /* Más padding para que respire */
+  box-sizing: border-box;
+  background-color: var(--color-white); /* Fondo blanco para la sección */
+  border-radius: 12px; /* Bordes más suaves */
+  box-shadow: var(--shadow-medium); /* Sombra elegante */
+  transition: var(--transition-ease); /* Transición para efectos de hover si los añades */
 }
 
 .home-page-section h2 {
-  color: #2c3e50;
-  font-size: 2.2rem;
-  margin-bottom: 25px;
+  color: var(--color-dark); /* Usa la variable */
+  font-size: 2.8rem; /* Tamaño de fuente más grande para el título principal */
+  margin-bottom: 30px; /* Más espacio */
+  font-weight: 700; /* Más audaz */
 }
 
 .home-page-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 1.2rem; /* Tamaño de fuente ligeramente más grande */
+  line-height: 1.8; /* Mayor altura de línea para legibilidad */
+  color: var(--color-gray-text); /* Usa la variable */
+  margin-bottom: 25px;
+  max-width: 700px; /* Limita el ancho del párrafo para legibilidad */
 }
 
 .home-actions {
   display: flex;
-  flex-direction: column;
-  gap: 15px; /* Space between buttons */
-  margin-top: 25px;
-  width: 100%; /* Ensure buttons take full width of their container */
-  max-width: 300px; /* Limit button group width for better appearance */
+  flex-direction: row; /* Cambia a fila para los botones */
+  gap: 20px; /* Más espacio entre botones */
+  margin-top: 35px;
+  width: 100%;
+  max-width: 500px; /* Limita el ancho del grupo de botones */
+  justify-content: center; /* Centra los botones si hay espacio */
 }
 
 .home-actions p {
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-weight: 600; /* Un poco más audaz */
+  margin-bottom: 15px; /* Espacio antes de los botones */
+  font-size: 1.1rem;
 }
 
 .action-button {
-  padding: 12px 25px;
-  border-radius: 25px;
+  padding: 30px 30px; /* Más padding */
+  border-radius: 30px; /* Más redondeado */
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Make buttons fill the max-width of home-actions */
-  box-sizing: border-box;
+  font-weight: 700; /* Más audaz */
+  transition: var(--transition-ease); /* Usa la variable de transición */
+  font-size: 1.1rem; /* Tamaño de fuente de botón */
+  min-width: 180px; /* Ancho mínimo para los botones */
+  text-align: center;
+  box-shadow: var(--shadow-light); /* Sombra sutil en los botones */
 }
 
+/* Cambios aquí: Usamos los colores azules de la nueva gama */
 .action-button.primary {
-  background-color: #28a745; /* Green for new chat */
-  color: white;
+  background-color: var(--color-blue-medium); /* Azul medio para el botón primario */
+  color: var(--color-white);
+  border: 2px solid var(--color-blue-medium);
 }
 
 .action-button.primary:hover {
-  background-color: #218838;
+  background-color: var(--color-white);
+  color: var(--color-blue-medium);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
 }
 
 .action-button.secondary {
-  background-color: #007bff; /* Blue for explore */
-  color: white;
+  background-color: var(--color-blue-light); /* Azul claro para el botón secundario */
+  color: var(--color-dark); /* Texto oscuro para contraste */
+  border: 2px solid var(--color-blue-light);
 }
 
 .action-button.secondary:hover {
-  background-color: #0056b3;
+  background-color: var(--color-dark); /* Fondo oscuro al pasar el ratón */
+  color: var(--color-white); /* Texto blanco al pasar el ratón */
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* Media Queries para la página de inicio en pantallas pequeñas */
+@media (max-width: 600px) {
+  .home-page-section {
+    padding: 25px;
+    border-radius: 8px;
+    margin: 20px auto;
+  }
+  .home-page-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .home-page-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  .home-actions {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 280px;
+  }
+  .action-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
 }

@@ -1,22 +1,24 @@
 /* src/components/ContentArea.css */
 .content-section {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    flex-grow: 1; /* Allows the section to fill vertical space */
+    background-color: var(--color-white); /* Fondo blanco */
+    padding: 30px; /* Mantén el padding */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: var(--shadow-medium); /* Sombra uniforme */
+    margin-bottom: 25px; /* Más espacio entre secciones */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    width: 100%; /* Ensure it takes 100% of its parent's width */
-    max-width: 100%; /* Ensure no max-width is restricting it */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .content-section h2 {
-  color: #2c3e50;
-  margin-bottom: 20px;
+  color: var(--color-dark); /* Usa la variable */
+  margin-bottom: 25px; /* Más espacio */
   text-align: center;
+  font-size: 2rem; /* Tamaño de título de sección */
+  font-weight: 700;
 }
 
 /* Estilos para el chatbot específico dentro de ContentArea.css */
@@ -31,22 +33,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border); /* Usa la variable */
   border-radius: 8px;
   overflow: hidden;
-  background-color: #f9f9f9;
-  width: 100%; /* Ensure the chat window itself takes full width of its parent */
-  max-width: 100%; /* No max-width */
+  background-color: var(--color-light); /* Fondo claro para la ventana de chat */
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
 .chat-section .chat-window {
-  flex-grow: 1; /* Hace que la ventana del chat ocupe el espacio disponible */
-  min-height: 400px; /* Mantén un mínimo, pero ahora puede crecer */
+  flex-grow: 1;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 }
 
@@ -54,85 +56,92 @@
   flex-grow: 1;
   padding: 15px;
   overflow-y: auto;
-  background-color: #e9ecef;
+  background-color: var(--color-background-light); /* Fondo de display de mensajes */
   display: flex;
   flex-direction: column;
 }
 
-/* Mantén los estilos para .message, .message-input-form, etc. como los tenías */
-/* Asegúrate de que los estilos específicos de .message.user y .message.bot estén también aquí */
+.message {
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
 .message.user {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-blue-medium); /* Azul medio para mensajes del usuario */
+  color: var(--color-white);
   align-self: flex-end;
   border-bottom-right-radius: 4px;
 }
 
 .message.bot {
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: var(--color-white); /* Fondo blanco para mensajes del bot */
+  color: var(--color-dark);
   align-self: flex-start;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-border);
   border-bottom-left-radius: 4px;
 }
 
-/* También revisa los estilos para el input y el botón en ContentArea.css */
 .chat-section .message-input-form {
     display: flex;
     padding: 10px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--color-border); /* Borde superior del input */
+    background-color: var(--color-white); /* Fondo del área de input */
 }
 
 .chat-section .message-input-form input {
     flex-grow: 1;
     padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 25px; /* Más redondeado */
     margin-right: 10px;
     font-size: 1rem;
     outline: none;
 }
 
 .chat-section .message-input-form input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: var(--color-blue-medium); /* Borde azul al enfocar */
+    box-shadow: 0 0 0 0.2rem rgba(100, 181, 246, 0.25); /* Sombra de focus con el azul */
 }
 
 .chat-section .message-input-form button {
-    background-color: #28a745;
-    color: white;
+    background-color: var(--color-blue-medium); /* Color del botón de enviar: #64B5F6 */
+    color: var(--color-white);
     border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-radius: 25px; /* Más redondeado */
+    padding: 10px 25px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: var(--transition-ease);
+    box-shadow: var(--shadow-light);
 }
 
 .chat-section .message-input-form button:hover {
-    background-color: #218838;
+    background-color: var(--color-dark); /* Un color más oscuro al pasar el ratón */
+    box-shadow: var(--shadow-hover);
 }
-
-/* src/components/ContentArea.css (example adjustments) */
 
 /* Existing styles for content-area */
 .content-area {
-    flex-grow: 1; /* This is crucial for the content to take available space */
+    flex-grow: 1;
     padding: 20px;
-    background-color: #f5f7fa;
-    display: flex; /* Make it a flex container */
-    flex-direction: column; /* Stack children vertically */
-    overflow-y: auto; /* Add scroll if content overflows */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para que se vea la imagen */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 /* Existing styles for content-section */
 .content-section {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    flex-grow: 1; /* This makes the chat section expand within content-area */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }

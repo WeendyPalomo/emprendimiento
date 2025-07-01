@@ -1,29 +1,76 @@
 /* src/App.css */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f2f5;
+  font-family: 'Inter', sans-serif; /* Asegúrate de que coincida con index.css */
+  background-color: var(--color-background-light); /* Usa la variable */
+  color: var(--color-gray-text); /* Usa la variable */
 }
 
 .app-container {
   display: flex;
-  height: 100vh; /* Ensure full viewport height */
-  overflow: hidden; /* Prevent overall scrolling */
+  min-height: 100vh; /* Usa min-height para que crezca con el contenido */
+  overflow: hidden; /* Prevent overall scrolling (solo si quieres que el contenido interno tenga su propio scroll) */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05); /* Sombra sutil para el contenedor principal */
 }
 
-
 .sidebar {
-  /* Your existing sidebar styles */
-  width: 250px; /* Example fixed width for sidebar */
-  flex-shrink: 0; /* Prevent sidebar from shrinking */
+  width: 250px;
+  flex-shrink: 0;
+  background-color: var(--color-green-medium); /* Fondo de la sidebar con el verde medio */
+  color: var(--color-white); /* Texto blanco */
+  box-shadow: var(--shadow-medium); /* Sombra para separar de contenido */
+  padding: 20px 0; /* Ajusta el padding vertical */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente en la sidebar */
 }
 
 .content-area {
-  flex-grow: 1; /* This is crucial: allows content-area to take all available space */
-  padding: 20px; /* Maintain your padding */
-  background-color: #f5f7fa; /* Your background color */
+  flex-grow: 1;
+  padding: 30px; /* Aumenta un poco el padding general */
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para que se vea la imagen */
   display: flex;
   flex-direction: column;
-  /* Remove any fixed width or max-width here if present */
-  /* max-width: none; */ /* Ensure no max-width is set */
+  overflow-y: auto; /* Permite el scroll solo en el área de contenido si es necesario */
+  width: 100%; /* Asegura que tome todo el ancho disponible */
+  box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+.content-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://chugchilan.gob.ec/cotopaxi/wp-content/uploads/2025/02/DJI_20240305083538_0035_D.png'); /* Tu imagen de fondo */
+  background-size:cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat:no-repeat; /* Evita que la imagen se repita */
+  filter: blur(2px); /* Aplica el efecto de desenfoque. Puedes ajustar el valor (ej. 3px, 8px) */
+  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+/* Opcional: media queries para responsividad básica */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Apila la sidebar y el contenido en pantallas pequeñas */
+  }
+  .sidebar {
+    width: 100%;
+    height: auto; /* Permite que la altura de la sidebar sea automática */
+    padding: 15px;
+    flex-direction: row; /* Horizontal para móviles */
+    justify-content: space-around; /* Distribuye los elementos */
+    box-shadow: var(--shadow-light);
+  }
+  .content-area {
+    padding: 20px;
+  }
+  /* Asegúrate de que el pseudo-elemento también se ajuste en móvil si es necesario */
+  .content-area::before {
+    filter: blur(3px); /* Un desenfoque un poco menor para pantallas pequeñas */
+  }
 }

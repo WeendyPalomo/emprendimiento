@@ -9,9 +9,8 @@ function HomePage() {
     <div className="content-section home-page-section">
       <h2>¡Bienvenido a tu Asistente Legal Rural!</h2>
       <p>
-        Aquí encontrarás apoyo y orientación sobre temas legales relevantes para las comunidades rurales, especialmente en la zona de **Chugchilán, Cantón Sigchos, Provincia de Cotopaxi, Ecuador**.
-      </p>
-      <p>
+        Aquí encontrarás apoyo y orientación sobre temas legales relevantes para la comunidad rural de Chugchilán, Cantón Sigchos, Provincia de Cotopaxi, Ecuador.
+
         Nuestro objetivo es brindarte información accesible sobre derechos territoriales, uso del agua, conflictos vecinales, temas de familia, trabajo y más.
       </p>
       <div className="home-actions">
