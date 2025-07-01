@@ -1,43 +1,43 @@
-// src/components/Sidebar.js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
+import { useLanguage } from './Traductor'; // 👈 Importa el hook
 import logo from '../assets/logoBorde.png';
 
-
 function Sidebar() {
+  const { translations } = useLanguage(); // 👈 Accede a traducciones
+
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <h1>Asistente Legal</h1>
-        <p className="app-tagline">Chugchilán</p>
+        <h1>{translations.sidebarTitle}</h1>
+        <p className="app-tagline">{translations.sidebarTagline}</p>
       </div>
       <nav className="sidebar-nav">
         <ul>
           <li>
             <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-              <span className="nav-icon">🏠</span> Inicio
+              <span className="nav-icon">🏠</span> {translations.sidebarHome}
             </NavLink>
           </li>
           <li>
             <NavLink to="/new-chat" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-              <span className="nav-icon">💬</span> Nuevo Chat
+              <span className="nav-icon">💬</span> {translations.sidebarNewChat}
             </NavLink>
           </li>
           <li>
             <NavLink to="/explore" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-              <span className="nav-icon">✨</span> Explorar Temas
+              <span className="nav-icon">✨</span> {translations.sidebarExplore}
             </NavLink>
           </li>
         </ul>
       </nav>
-      {/* Nueva imagen del logo */}
-    
-      <div className="sidebar-footer">
-          <div className="sidebar-logo-container">
+      <div className="sidebar-logo-container">
         <img src={logo} alt="Logo de la aplicación" className="sidebar-logo" />
+
       </div>
-        <p>&copy; 2024 Legal AI</p>
+      <div className="sidebar-footer">
+        <p>{translations.sidebarFooter}</p>
       </div>
     </div>
   );
