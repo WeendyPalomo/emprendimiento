@@ -6,9 +6,11 @@ export default function ToggleSwitch({ isOn, handleToggle }) {
   return (
     <label className="switch">
       <input type="checkbox" checked={isOn} onChange={handleToggle} />
-      <span className="slider" />
-      <span className="label-text">
-        {isOn ? 'QU → ES' : 'ES → QU'}
+      <span className="slider">
+        <span className="slider-label">
+          <span className="label-qu">QU </span>
+          <span className="label-es">ES </span>
+        </span>
       </span>
     </label>
   );
