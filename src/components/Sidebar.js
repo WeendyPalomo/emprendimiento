@@ -1,8 +1,10 @@
+// file: src/components/Sidebar.js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 import { useLanguage } from './Traductor'; // 👈 Importa el hook
 import logo from '../assets/logoBorde.png';
+import logoU from '../assets/logoU.png'; 
 
 function Sidebar() {
   const { translations } = useLanguage(); // 👈 Accede a traducciones
@@ -12,6 +14,7 @@ function Sidebar() {
       <div className="sidebar-header">
         <h1>{translations.sidebarTitle}</h1>
         <p className="app-tagline">{translations.sidebarTagline}</p>
+        <img src={logoU} alt="Logo de la aplicación" className="sidebar-logo" />
       </div>
       <nav className="sidebar-nav">
         <ul>

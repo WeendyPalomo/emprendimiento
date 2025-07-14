@@ -24,6 +24,15 @@ function HomePage() {
     <Link to="/explore" className="action-button secondary">
       {translations.exploreButton}
     </Link>
+      <a
+        href="https://drive.google.com/file/d/19GUdlIEtPZcparLDl6dm-7nZcFy7cIeZ/view?usp=drive_link"
+        className="action-button primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {translations.downloadButton}
+      </a>
+
   </div>
 
   <p>{translations.homeFooter}</p>

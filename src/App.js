@@ -42,7 +42,7 @@ function App() {
   return (
     // Aquí se provee el contexto de idioma a toda la app
     <LanguageProvider>
-      <Router basename={basename}>
+      <Router basename='/'>
         <AppContent />
       </Router>
     </LanguageProvider>
