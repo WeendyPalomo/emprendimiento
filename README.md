@@ -1,8 +1,6 @@
-# 🤖 Asistente Legal Comunitario 🇪🇨
+# 🤖 Asistente Legal 🇪🇨
 
 Una herramienta digital gratuita que responde preguntas legales de forma clara, rápida y accesible para comunidades rurales del Ecuador.
-
-![Banner del proyecto](https://i.imgur.com/tu-banner.jpg) <!-- Puedes cambiar este link por tu imagen -->
 
 ---
 
