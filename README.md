@@ -22,14 +22,6 @@ El **Asistente Legal Comunitario** es un chatbot desarrollado con **React** y co
 
 ---
 
-## 📸 Vista previa
-
-<div align="center">
-  <img src="https://i.imgur.com/preview-chatbot.png" alt="Vista previa del chatbot" width="70%"/>
-</div>
-
----
-
 ## 🛠️ Instalación local
 
 ### 1. Clona este repositorio
