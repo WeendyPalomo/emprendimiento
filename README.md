@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# 🤖 Asistente Legal Comunitario 🇪🇨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una herramienta digital gratuita que responde preguntas legales de forma clara, rápida y accesible para comunidades rurales del Ecuador.
 
-## Available Scripts
+![Banner del proyecto](https://i.imgur.com/tu-banner.jpg) <!-- Puedes cambiar este link por tu imagen -->
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Descripción del Proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El **Asistente Legal Comunitario** es un chatbot desarrollado con **React** y conectado a la **API de OpenAI GPT-3.5**, que brinda respuestas automáticas sobre dudas legales frecuentes. Está diseñado para empoderar a las personas de zonas rurales con información útil sobre sus derechos, trámites y protección legal.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Tecnologías utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ⚛️ React.js – Interfaz del chatbot
+- 🔥 Firebase Firestore – Almacenamiento de preguntas más repetidas
+- 🤖 OpenAI API (GPT-3.5) – Generación de respuestas
+- 🎨 Bootstrap – Estilos del frontend
+- 📦 Vercel / Netlify / Render – (opcional para despliegue)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📸 Vista previa
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="center">
+  <img src="https://i.imgur.com/preview-chatbot.png" alt="Vista previa del chatbot" width="70%"/>
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Instalación local
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clona este repositorio
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/tuusuario/asistente-legal.git
+cd asistente-legal
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Instala las dependencias
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Configura tu entorno
+configura tu proyecto de Firebase (Firestore) con tus credenciales.
 
-## Learn More
+### 4. Inicia la app
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔐 Licencia
+Este proyecto está licenciado bajo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**📝 Creative Commons BY-NC-SA 4.0**
+Puedes compartir y adaptar el contenido con fines no comerciales, siempre que reconozcas la autoría y uses la misma licencia.
 
-### Code Splitting
+## 🙌 Agradecimientos
+Este proyecto fue desarrollado por estudiantes con enfoque comunitario y social para apoyar el acceso a la justicia en el Ecuador rural.
+Con el apoyo de líderes locales, docentes y personas capacitadas en la comunidad de Chugchilán, Cotopaxi.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
