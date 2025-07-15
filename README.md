@@ -51,7 +51,7 @@ Este proyecto está licenciado bajo:
 Puedes compartir y adaptar el contenido con fines no comerciales, siempre que reconozcas la autoría y uses la misma licencia.
 
 ## 🙌 Agradecimientos
-Este proyecto fue desarrollado por estudiantes con enfoque comunitario y social para apoyar el acceso a la justicia en el Ecuador rural.
+Este proyecto fue desarrollado por estudiantes de la Pontificia Universidad Catolica del Ecuador con enfoque comunitario y social para apoyar el acceso a la justicia en el Ecuador rural.
 Con el apoyo de líderes locales, docentes y personas capacitadas en la comunidad de Chugchilán, Cotopaxi.
 
 
