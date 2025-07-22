@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.5ea1aef1.css",
-    "main.js": "/static/js/main.073e4664.js",
+    "main.js": "/static/js/main.7fcbce1d.js",
     "static/js/453.37f5700e.chunk.js": "/static/js/453.37f5700e.chunk.js",
     "static/media/logoBorde.png": "/static/media/logoBorde.784e42fd79b55cfcab62.png",
     "static/media/logoU.png": "/static/media/logoU.20327edb47dc32178010.png",
     "index.html": "/index.html",
     "main.5ea1aef1.css.map": "/static/css/main.5ea1aef1.css.map",
-    "main.073e4664.js.map": "/static/js/main.073e4664.js.map",
+    "main.7fcbce1d.js.map": "/static/js/main.7fcbce1d.js.map",
     "453.37f5700e.chunk.js.map": "/static/js/453.37f5700e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5ea1aef1.css",
-    "static/js/main.073e4664.js"
+    "static/js/main.7fcbce1d.js"
   ]
 }
